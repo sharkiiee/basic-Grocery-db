@@ -5,7 +5,8 @@ mongoose.connect("URL");
 const AdminSchema = mongoose.Schema({
     username : String,
     shops : [{
-        owned:{type: Boolean}
+        owned:{type: Boolean},
+        shopNo:Number
     }]
 })
 
