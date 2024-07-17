@@ -1,26 +1,29 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("URL");
+mongoose.connect("URL")
 
-const AdminSchema = mongoose.Schema({
-    username : String,
-    shops : [{
-        owned:{type: Boolean},
-        shopNo:Number
-    }]
+const AdminSchema = new mongoose.Schema({
+    username: String,
+    password: Number    
 })
 
-const ownerSchema = mongoose.Schema({
-    ownerName : String,
-    productDetail : String,
-    productList: [{type: Object}],
-    shopNo: Number
+const UserSchema = new mongoose.Schema({
+    username: String,
+    password: Number,
+    phoneNo : Number
 })
 
-const Admins = mongoose.model('grocery-market',AdminSchema);
-const Owners = mongoose.model('grocery-market',ownerSchema);
+const ProductSchema = new mongoose.Schema({
+    productName: String,
+    price: Number
+})
+
+const Admin = mongoose.model('Admin',AdminSchema);
+const User = mongoose.model('User',UserSchema);
+const Product = mongoose.model('Product',ProductSchema);
 
 module.exports = {
-    Admins,
-    Owners
+    Admin,
+    User,
+    Product
 }
