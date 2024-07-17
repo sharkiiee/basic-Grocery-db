@@ -3,11 +3,11 @@
 ## DATABASE
 
 **TABLES**
+
 - `Admin Table`
-  Description :- Admin table contains username and password for the admin. 
-  
+  Description :- Admin table contains username and password for the admin.
 - `User Table`
-  Description :- User table contains data about ownerName, shopNo, 
+  Description :- User table contains data about ownerName, shopNo,
   Inputs :- 1. username 2. password
 
 - `Product Table`
@@ -19,21 +19,20 @@
 ## Admin Routes
 
 - `Admin /signup`
-    Description :- Contain data about Admins .
+  Description :- Contain data about Admins .
   Inputs :- username and password.
   Output :- Admin account is been created
 - `Admin /signin`
-    Description :- Save data about Admin
+  Description :- Save data about Admin
   Inputs :- username and password
   Output :- signin completed
-  
 - `Admin /showProducts`
-   Description :- Show all the products of the store.
-  
-- `Admin /addProduct`
+  Description :- Show all the products of the store.
+- `Admin /product`
   Description :- Add new product in the store
 
 #### User Routes
+
 - `User /signup`
   Description :- Contain data about user .
   Inputs :- username and password.
@@ -46,6 +45,5 @@
 
 - `User /showProducts`
   Description :- Show all the products of the store.
-  
 - `User /purchaseProduct`
   Description :- Place your order.

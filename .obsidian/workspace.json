@@ -11,12 +11,8 @@
             "id": "a8fd551c6d35e428",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.MD.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.MD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.MD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,8 +140,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a8fd551c6d35e428",
+  "active": "4dee5405dd3d15a1",
   "lastOpenFiles": [
+    "backend/validation/types.js",
+    "backend/validation",
+    "backend/node_modules/zod/lib/locales/en.js",
+    "backend/node_modules/zod/lib/__tests__/Mocker.js",
+    "backend/node_modules/zod/lib/__tests__/Mocker.d.ts",
+    "backend/node_modules/zod/lib/locales/en.d.ts",
+    "backend/node_modules/zod/lib/helpers/util.d.ts",
+    "backend/node_modules/zod/lib/helpers/enumUtil.js",
+    "backend/node_modules/zod/lib/helpers/util.js",
+    "backend/node_modules/zod/lib/helpers/typeAliases.js",
+    "backend/node_modules/zod/lib/helpers/errorUtil.d.ts",
+    "backend/node_modules/bson/vendor/text-encoding/README.md",
+    "backend/node_modules/bson/vendor/text-encoding/LICENSE.md",
+    "backend/node_modules/bson/vendor/base64/README.md",
+    "backend/node_modules/mongoose/lib/drivers/SPEC.md",
+    "README.md",
     "README.MD.md"
   ]
 }
