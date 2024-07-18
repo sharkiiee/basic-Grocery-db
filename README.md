@@ -38,6 +38,12 @@
   Inputs :- username and password.
   Output :- Grocery user account is been created
 
+  //Contraints to be follow
+
+  1. No same username
+  2. password should have 8 charac
+  3. phone no should have 10 values
+
 - `User /signin`
   Description :- Save data about users
   Inputs :- username and password
