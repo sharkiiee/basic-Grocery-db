@@ -14,24 +14,30 @@ const router = Router();
 
 router.post("/signup",async function(req,res){
     try {
-        const createPayload = req.body;
-    const parsePayload = adminSignupValidation.safeParse(createPayload);
-
-    if(!parsePayload.success)
-    {
-        return res.status(400).json({
-            message: "validation is wrong, inputs be like username -> email and password -> min 8 number"
+        const isPresent = await Admin.findOne({
+            username:req.body.username
         })
-    }
+        if(!isPresent){
 
-    await Admin.create({
-        username:req.body.username,
-        password: req.body.password
-    })
-
-    res.json({
-        message: "Admin account is been created"
-    })
+            const createPayload = req.body;
+        const parsePayload = adminSignupValidation.safeParse(createPayload);
+    
+        if(!parsePayload.success)
+        {
+            return res.status(400).json({
+                message: "validation is wrong, inputs be like username -> email and password -> min 8 number"
+            })
+        }
+    
+        await Admin.create({
+            username:req.body.username,
+            password: req.body.password
+        })
+    
+        res.json({
+            message: "Admin account is been created"
+        })
+        }
 
     } catch (e) {
         return res.json({
@@ -67,7 +73,7 @@ router.get("/signin",async function(req,res){
             message: "Unauthenticated access please check inputs"
         })
     }else{
-        const username = req.body;
+        const username = req.body.username;
         const token = jwt.sign({username},JWT_SECRET);
 
         res.json({

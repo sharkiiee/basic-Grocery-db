@@ -10,7 +10,11 @@ const AdminSchema = new mongoose.Schema({
 const UserSchema = new mongoose.Schema({
     username: String,
     password: Number,
-    phoneNo : Number
+    phoneNo : Number,
+    purchaseProduct:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: 'Product'
+    }]
 })
 
 const ProductSchema = new mongoose.Schema({
