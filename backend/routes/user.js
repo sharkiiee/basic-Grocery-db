@@ -124,14 +124,18 @@ router.get("/orders",userMiddleware,async function(req,res){
 
     const username = req.username;
     
-    const buyedProduct = await User.findOne({
+    const user = await User.findOne({
         username
-    },{
-        purchaseProduct
+    });
+
+    const products = await Product.find({
+        _id:{
+            "$in": user.purchaseProduct
+        }
     })
 
     res.json({
-        Products: buyedProduct
+        Products: products
     })
 })
 

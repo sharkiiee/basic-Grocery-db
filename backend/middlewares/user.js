@@ -13,8 +13,6 @@ function userMiddleware(req,res,next)
     const decodedValue = jwt.verify(jwtToken,JWT_SECRET);
     
     if(decodedValue.username){
-        console.log(decodedValue)
-        console.log(decodedValue.username)
         req.username = decodedValue.username;
         next();
     }else{
