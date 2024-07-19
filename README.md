@@ -26,7 +26,7 @@
   Description :- Save data about Admin
   Inputs :- username and password
   Output :- signin completed
-- `Admin /showProducts`
+- `Admin /products`
   Description :- Show all the products of the store.
 - `Admin /product`
   Description :- Add new product in the store
